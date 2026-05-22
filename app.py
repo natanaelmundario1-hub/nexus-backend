@@ -134,7 +134,7 @@ def calcular_credito():
     
     # Barreira de Proteção: Validação de Sessão ativa
     if not token or token not in TOKENS_VALIDOS:
-        return jsonify({"erro": "Sessão inválida ou não autorizada. Faça login novamente."}), 401
+     return jsonify({"mensagem": mensagem})
     
     valor_imovel = dados.get('valorImovel', 0)
     renda_bruta = dados.get('rendaBruta', 0)
